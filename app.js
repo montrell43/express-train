@@ -7,6 +7,7 @@ const app = express(); // app represents the server
 
 app.use(morgan("dev")); // this will logg the incoming requests// npm morgan in the search bar to visit  package site
 app.use(express.json());
+app.use("/api/store", storeRouter);
 
 
 

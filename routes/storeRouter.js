@@ -52,7 +52,7 @@ if(!foundProduct){
 
 // Delete
 router.delete("/delete-product/:name", (req, res) => {
-    const newArray = data.filter(name => name === req.params.name);
+    const newArray = store.filter(product => product.name === req.params.name);
     if (newArray === -1) {
         res.end("Product not found")
     } else {
